@@ -15,4 +15,8 @@ public class ProfileWorker {
     public ArrayList<Contact> getContactsList(){
        return fileService.getFileContacts();
     }
+
+    public String getSavePath(){
+        return fileService.getSavePath();
+    }
 }
