@@ -8,8 +8,14 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
-	compileJava.options.encoding = 'UTF-8'
-	compileTestJava.options.encoding = 'UTF-8'
+}
+
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'com.petr.app.AppApplication'
+		)
+	}
 }
 
 repositories {
@@ -17,8 +23,9 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.shell:spring-shell:1.2.0.RELEASE'
 	implementation 'org.projectlombok:lombok:1.18.26'
-	implementation 'org.springframework:spring-context:6.0.9'
+	implementation 'org.springframework.shell:spring-shell-starter:3.0.1'
 }
 
 tasks.named('test') {
