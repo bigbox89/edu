@@ -1,3 +1,0 @@
-app:
-  createStudentsOnStartup: true
-  numberOfStudents: 5
