@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: news
+  datasource:
+    url: jdbc:postgresql://localhost:5432/news
+    username: admin
+    password: 123
+    hikari:
+      schema: news_schema
